@@ -1,0 +1,18 @@
+
+.images{
+    width:300px;
+    float: left;
+}
+
+.text{
+    vertical-align: middle;
+    display: table-cell;
+    height: 240px;
+}
+.portfolio{
+    width:85%
+}
+
+.item{
+    clear: both;
+}
