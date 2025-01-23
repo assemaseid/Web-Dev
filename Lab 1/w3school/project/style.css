@@ -1,0 +1,61 @@
+#header {
+    height: 100px; 
+    background-color: rgb(4, 52, 76);
+    text-transform: uppercase;
+    color: aliceblue;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 5%;
+    
+}
+
+#logo {
+    width: 20%; 
+    margin-left: 15%; 
+}
+
+.menu {
+    list-style: none;
+    display: flex; 
+    gap: 25px; 
+}
+
+a:active{
+    color:aliceblue;
+}
+
+a:link{
+    color:rgb(122,186,5);
+}
+a:hover{
+    color:aliceblue;
+}
+a:visited {
+    color: rgb(122, 186, 5);
+}
+
+h2{
+    position: absolute;
+    background-color:rgb(4, 52, 76);;
+    padding-top: 60px;
+    padding-bottom: 180px;
+    padding-left: 45%;
+    padding-right: 45%;
+    text-align: center;
+    color:aliceblue;
+    text-transform:uppercase ;
+    margin: 0;
+    z-index: 1;
+}
+
+.photos div{
+    float: left;
+    width: 20%;
+    margin: 6.5%;
+}
+
+.photos{
+    position: relative;
+    z-index: 2;
+}
