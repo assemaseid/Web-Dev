@@ -104,6 +104,8 @@
     border-radius: 6px;
     font-size: 17px;
     padding-left: 18px;
+    border:none;
+    border:1px solid rgba(153,153,153,0.5);
 }
 
 .email{
@@ -142,12 +144,12 @@ ul{
 
 #footer{
     width:980px;
-    /* background-color: #0766ff; */
     margin: 0 auto;
 }
 
 
 a:link {
+    color: rgb(157, 157, 157);
     text-decoration: none;
 }
 
