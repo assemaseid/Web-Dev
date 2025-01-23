@@ -1,0 +1,177 @@
+#page{
+    background-color: #f2f4f7;
+    height: 720px;
+    padding-left: 22%;
+}
+
+
+#logo{
+    height: 106px;
+    margin-left: -1.5%;
+    position: absolute;
+}
+
+#description{
+    padding-top: 70px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+#text{
+    padding-top: 12%;
+    float: left;
+    width:37%;
+    line-height: -5px;
+}
+
+#right-side{
+    padding-top: 132px;
+    float:right;
+    margin-right: 30%;
+
+}
+#card{
+    
+    width:396px;
+    height: 349px;
+    background-color:white;
+    box-shadow: 0px 5px 15px 0px rgba(153,153,153,0.5);
+    border-radius: 8px;
+    
+}
+
+#login{
+    background-color: #0766ff;
+    color:white;
+    font-weight: bold;
+    border-radius: 6px;
+    width: 364px;
+    height: 48px;
+    font-size: 20px;
+    margin-left: 16px;
+    border:none;
+}
+
+#create{
+    background-color: #45b333;
+    
+    font-weight: bold;
+    border-radius: 6px;
+    width: 194px;
+    height: 48px;
+    font-size:15px;
+    margin-top: 26px;
+    margin-left: 101px;
+    border:none;
+}
+
+#create a:visited{
+    color:white;
+}
+
+#create a:hover{
+    text-decoration: none;
+}
+
+#line-in-card{
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#celebrity{
+    text-align: center;
+}
+
+#celebrity a:visited{
+    color: black;
+}
+#forgot-password{
+    font-size: 15px;
+    text-align: center;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+
+}
+#forgot-password a:visited{
+    color:#0766ff;
+
+}
+.input{
+    width: 340px;
+    height: 48px;
+    border-radius: 6px;
+    font-size: 17px;
+    padding-left: 18px;
+}
+
+.email{
+    margin:16px 16px 6px 16px;
+}
+
+.password{
+    margin:6px 16px 16px 16px;
+}
+
+.line{
+    width: 364px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    margin-left:16px;
+    margin-right: 16px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap:17px;    
+    padding: 0;
+    flex-wrap: wrap;
+    font-size: smaller;
+    font-family:SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    line-height: 4px;
+    font-size: 13px;
+}
+
+
+#languages{
+    padding-top: 15px;
+    /* font-size:12px; */
+    
+}
+
+#footer{
+    width:980px;
+    /* background-color: #0766ff; */
+    margin: 0 auto;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(157, 157, 157);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: rgb(248, 248, 181);    
+    text-decoration: underline;
+}
+
+#line2{
+    width:980px;
+    border-bottom:1px solid rgb(173, 173, 173);
+}
+
+#meta2025{
+    padding-top: 7px;
+    color: rgb(124, 124, 124);
+    font-size: small;
+}
+
