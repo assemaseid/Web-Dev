@@ -1,0 +1,69 @@
+body{
+    margin:0px;
+    
+}
+.page{
+    margin-left:20%;
+}
+h3{
+    padding: 20px;
+    background-color: rgb(32, 32, 32);
+    color:rgb(98, 98, 98);
+}
+
+
+#display{
+    width: 60%;
+    height: 40px;
+    border: 1px solid;
+    font-size: medium;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+#btn{
+    position: absolute;
+    width: 100px;
+    height: 44px;
+    background-color: rgb(17, 78, 139);
+    color:white;
+    border: none;
+    font-size: medium;
+}
+
+#todos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.task-item {
+    height: 70px;
+    width:900px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.task-text{
+    width: 750px;
+}
+
+.delete-btn {
+    cursor: pointer;
+}
+
+.deleted {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
