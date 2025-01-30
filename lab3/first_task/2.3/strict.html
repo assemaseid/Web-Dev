@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        x = 10; // error: x is not defined (undeclared variables are not allowed)
+        console.log(x);
+
+        function myFunction() {
+            y = 20; // error: y is not defined
+        }
+        myFunction();
+
+        function test() {
+            a = 10; // No error, `a` becomes a global variable
+        }
+        test();
+        console.log(a); // 10 (not recommended)
+
+        function test() {
+            b = 10; // error: b is not defined
+        }
+        test();
+
+        let obj = {
+            name: "Alice",
+            name: "Bob" // error: Duplicate property name
+        };
+
+        // let myVar = 10;
+        // delete myVar; //  error: Cannot delete variable
+        // let let = 5; // error: `let` is a reserved keyword
+
+
+    </script>
+</body>
+</html>

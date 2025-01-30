@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Semicolon usage</title>
+</head>
+<body>
+    <script>
+        //When Writing Multiple Statements on One Line
+        alert('Hello'); alert('World');
+
+        //omiited by ASI
+        alert("Hello");
+        alert('world');
+
+        alert(3 +
+        1
+        + 2)
+        //Before a Line Starting with (, [ or Template Literals
+        alert("Hello");
+        [1, 2].forEach(alert);
+
+        // This comment occupies a line of its own
+        alert('Hello');
+        alert('World'); // This comment follows the statement
+
+        /* An example with two messages.
+        This is a multiline comment.
+        */
+        alert('Hello');
+        alert('World');
+
+        /* Commenting out the code
+        alert('Hello');
+        */
+        alert('World');
+    </script>
+</body>
+</html>
