@@ -23,7 +23,7 @@ btn.addEventListener("click", function () {
         checkbox.addEventListener("change", function () {
             if (checkbox.checked) {
                 taskText.classList.add("completed");
-                taskText.classList.toggle("deleted");
+                // taskText.classList.toggle("deleted");
             } else {
                 taskText.classList.remove("completed");
             }

@@ -1,6 +1,5 @@
 body{
     margin:0px;
-    
 }
 .page{
     margin-left:20%;
@@ -10,15 +9,19 @@ h3{
     background-color: rgb(32, 32, 32);
     color:rgb(98, 98, 98);
 }
-
+ul{
+    padding: 0;
+}
 
 #display{
-    width: 60%;
+    width: 50%;
     height: 40px;
     border: 1px solid;
     font-size: medium;
-    padding-left: 20px;
-    margin-right: 20px;
+    margin-left:70px;
+    margin-right: 50px;
+    margin-bottom: 45px;
+    padding-left: 10px;
 }
 
 #btn{
@@ -34,12 +37,11 @@ h3{
 #todos {
     display: flex;
     flex-direction: column;
-    margin-left: 0;
 }
 
 .task-item {
     height: 70px;
-    width:900px;
+    width:70%;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -59,9 +61,12 @@ h3{
 
 .delete-btn {
     cursor: pointer;
+    border:none;
+    background-color: transparent;
+    font-size: medium;
 }
 
-.deleted {
+.completed {
     text-decoration: line-through;
     color: gray;
     opacity: 0.6;
