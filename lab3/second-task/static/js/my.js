@@ -41,6 +41,6 @@ btn.addEventListener('click', function() {
         display.value = '';
     }
     else{
-        alert('please')
+        alert('Please write task')
     }
 })
