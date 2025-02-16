@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lab4": {
+    "kaspi-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/lab4",
+            "outputPath": "dist/kaspi-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lab4:build:production"
+              "buildTarget": "kaspi-app:build:production"
             },
             "development": {
-              "buildTarget": "lab4:build:development"
+              "buildTarget": "kaspi-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,6 +94,6 @@
     }
   },
   "cli": {
-    "analytics": "56ae4851-8ee6-48ff-b77f-267a7323d0de"
+    "analytics": "a3a4a013-8cf1-4e3e-9cd8-f9b3a9f689c7"
   }
 }
