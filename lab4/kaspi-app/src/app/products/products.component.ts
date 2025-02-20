@@ -12,6 +12,7 @@ interface Product {
 
 @Component({
   selector: 'app-products',
+  standalone:true,
   styleUrls: ['./products.component.css'],
   imports: [CommonModule],
   template: `
