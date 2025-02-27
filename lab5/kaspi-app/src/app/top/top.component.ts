@@ -1,13 +1,12 @@
-
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './top.component.html',
-  styleUrls: ['./top.component.css']
+  imports: [],
+  template: `
+    <img src="https://i.pinimg.com/736x/40/ad/b4/40adb440cf4d67f6d24bc1cf2aa6d0cb.jpg" class="logo">
+  `,
+  styleUrl: './top.component.css'
 })
 export class TopComponent {
 

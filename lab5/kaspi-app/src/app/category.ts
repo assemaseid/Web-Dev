@@ -1,20 +1,8 @@
+import { Product } from "./product";
+
 export interface Category {
     id: number;
     name: string;
+    products: Product[];
   }
   
-  export const categories = [
-    {
-      name: "Phones"
-    },
-    {
-      name: "Gaming consoles"
-    },
-    {
-  
-      name: "Smart Watches"
-    },
-    {
-      name: "Others"
-    }
-  ]

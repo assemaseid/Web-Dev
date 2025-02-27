@@ -4,6 +4,6 @@ import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(appRoutes),  // You can add other global providers here
+    provideRouter(appRoutes), 
   ]
 };
