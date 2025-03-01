@@ -18,7 +18,8 @@ export class AlbumDetailsComponent implements OnInit{
   albums:Album[]=[]
   album!:Album;
   editedTitle: string = '';
-
+ 
+  
   constructor(private albumService:AlbumsService,
               private route:ActivatedRoute,
               private router:Router) {}
