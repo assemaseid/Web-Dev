@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-album-details',
+  standalone: true,
   imports: [CommonModule,FormsModule],
   templateUrl: './album-details.component.html',
   styleUrl: './album-details.component.css'
