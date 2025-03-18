@@ -22,6 +22,9 @@ import { ProductItemComponent } from "../product-item/product-item.component";
     </div>
   </main>
   `
+
+
+
 })
 
 export class ProductsComponent {
