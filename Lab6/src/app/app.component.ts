@@ -1,19 +1,13 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { RouterOutlet,RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  template: `
-    <nav>
-      <a routerLink="/home">Home</a> |
-      <a routerLink="/about">About</a> |
-      <a routerLink="/albums">Albums</a>
-    </nav>
-    <hr />
-    <router-outlet></router-outlet>
-  `,
+  imports: [RouterOutlet,RouterLink,HttpClientModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'Albums';
+}

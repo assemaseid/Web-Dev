@@ -1,0 +1,6 @@
+<h1>Photos</h1>
+<div *ngIf="album">
+    <p> {{album.title}}</p>
+    <img *ngFor="let photo of photos" [src]="photo.url">
+</div>
+<button (click)="return()">Return</button>

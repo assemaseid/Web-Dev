@@ -1,54 +1,38 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Album } from '../album';
+import { Photo } from '../photo';
 import { Observable } from 'rxjs';
 
-export interface Album {
-  id: number;
-  title: string;
-}
-
-export interface Photo {
-  id: number;
-  albumId: number;
-  title: string;
-  url: string;
-}
-
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AlbumsService {
-  private baseUrl = 'http://localhost:8080';
 
-  constructor(private http: HttpClient) {}
+  private url='https://jsonplaceholder.typicode.com/albums';
 
-  getAlbums(): Observable<Album[]> {
-    return this.http.get<Album[]>(`${this.baseUrl}/albums`);
+
+  constructor(private http:HttpClient) { }
+
+  getAlbums():Observable<Album[]>{
+    return this.http.get<Album[]>(`${this.url}`)
   }
 
-  createAlbum(title: string): Observable<Album> {
-    return this.http.post<Album>(`${this.baseUrl}/albums`, { title });
+  getAlbumById(id:number):Observable<Album>{
+    return this.http.get<Album>(`${this.url}/${id}`)
   }
 
-  deleteAlbum(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/albums/${id}`);
+  deleteAlbum(id:number):Observable<void>{
+    return this.http.delete<void>(`${this.url}/${id}`)
+  }
+  
+  updateAlbum(id: number, album: Album): Observable<Album> {
+    return this.http.put<Album>(`${this.url}/${id}`, album);
   }
 
-  getAlbum(id: number): Observable<Album> {
-    return this.http.get<Album>(`${this.baseUrl}/albums/${id}`);
+  getPhotos(id:number):Observable<Photo[]> {
+    return this.http.get<Photo[]>(`${this.url}/${id}/photos`)
   }
-
-  updateAlbum(id: number, title: string): Observable<Album> {
-    return this.http.put<Album>(`${this.baseUrl}/albums/${id}`, { title });
-  }
-
-  getPhotos(albumId: number): Observable<Photo[]> {
-    return this.http.get<Photo[]>(`${this.baseUrl}/albums/${albumId}/photos`);
-  }
-
-  uploadPhoto(albumId: number, file: File): Observable<Photo> {
-    const formData = new FormData();
-    formData.append('photo', file);
-    return this.http.post<Photo>(`${this.baseUrl}/albums/${albumId}/photos`, formData);
-  }
+  
+  
 }
