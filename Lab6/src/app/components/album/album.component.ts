@@ -29,25 +29,22 @@ export class AlbumComponent implements OnInit{
       this.albums = data;
     });
   }
-  
 
   deleteAlbum(id:number) {
     this.albumService.deleteAlbum(id).subscribe(()=>{
-      this.albums = this.albums.filter(album =>album.id !==id )
-      console.log('deleted'+`${id}`)
+      this.loadAlbums()
     })
   }
 
   addAlbum() {
     const title = this.newAlbumTitle.trim();
     if (!title) return;
-  
-    const newAlbum: Album = { userId: 1, id: 0, title }; // id будет переопределён в сервисе
-  
+    const newAlbum: Album = { userId: 1, id: 0, title }; 
     this.albumService.createAlbum(newAlbum).subscribe((created) => {
-      this.albums.push(created); // отображаем в списке
-      this.newAlbumTitle = '';   // очищаем input
+      this.albums.push(created); 
+      this.newAlbumTitle = '';   
     });
   }
+  
   
 }
