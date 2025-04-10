@@ -1,15 +1,15 @@
 def combo_string(a, b):
-if (len(a) < len(b)):
-    return a + b + a
-return b + a + b
+  if (len(a) < len(b)):
+      return a + b + a
+  return b + a + b
 
 
 def extra_end(str):
-return str[-2:] + str[-2:] + str[-2:]
+  return str[-2:] + str[-2:] + str[-2:]
 
 
 def first_half(str):
-return str[:len(str) // 2]
+  return str[:len(str) // 2]
 
 
 def first_two(str):
