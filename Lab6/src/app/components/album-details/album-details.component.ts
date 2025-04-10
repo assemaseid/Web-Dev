@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 
 export class AlbumDetailsComponent implements OnInit{
 
+  albums:Album[]=[]
   album!:Album;
   editedTitle: string = '';
 
@@ -27,6 +28,9 @@ export class AlbumDetailsComponent implements OnInit{
       this.album = data;
       this.editedTitle = data.title;
     })
+    this.albumService.getAlbums().subscribe(data=>{
+      this.albums=data;
+    })
   }
 
   return() {
@@ -34,11 +38,15 @@ export class AlbumDetailsComponent implements OnInit{
   }
 
   save() {
-    if(this.album) {
-      const updatedAlbum = {...this.album, title:this.editedTitle}
-      this.albumService.updateAlbum(this.album.id, updatedAlbum).subscribe(()=>{
-        alert('Title edited')
-      })
+    if (this.album) {
+      const updatedAlbum = { ...this.album, title: this.editedTitle };
+      this.albumService.updateAlbum(this.album.id, updatedAlbum).subscribe(() => {
+        this.albums = this.albums.map(album =>
+          album.id === updatedAlbum.id ? updatedAlbum : album
+        );
+        this.album = updatedAlbum;
+        alert('Title edited');
+      });
     }
   }
 

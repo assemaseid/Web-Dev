@@ -1,89 +1,103 @@
-a = int(input())
-b = int(input())
-for i in range(a, b + 1):
-if i % 2 == 0:
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if(i%2==0):
+        print(i, end=' ')
+
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+for i in range(a,b+1):
+    if(i%d==c):
+        print(i, end=' ')
+
+
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+  if((i**0.5)%1==0.0):
     print(i)
 
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-for i in range(a, b + 1):
-if i % d == c:
-    print(i)
+x=int(input())
+d=int(input())
+count=0
+if(x!=0):
+    for i in range (len(str(x))):
+        if(str(d) in str(x)[i]):
+            count+=1
+            print(count)
+else:
+    print('error, x is not natural')     
+    
+
+x=int(input())
+sum=0
+if(x!=0):
+    for i in range (len(str(x))):
+       sum+=int(str(x)[i])
+    print(sum)
+else:
+    print('error, x is not natural')  
+
+x=int(input())
+if(x!=0):
+   for i in range(1,len(str(x))+1):
+    n=str(x)[-i] 
+    if(int(n)!=0):
+        print(n,end="")
+else:
+    print('error, x is not natural')  
 
 
-a = int(input())
-b = int(input())
-for i in range(a, b + 1):
-  if i ** 0.5 % 1.0 == 0:
-      print(i)
-
-x = input()
-d = input()
-cnt = 0
-for i in x:
-  if d == i:
-      cnt += 1
-print(cnt)
+x=int(input())
+if(2<=x<=30000):
+    for i in range(2,x+1):
+        if(x%i==0):
+            print(i)
+            break
+else:
+    print('error, x is not in range 2<=x<=30000')  
 
 
-x = input()
-res = 0
-for i in x:
-  res += int(i)
-print(res)
+x=int(input())
+for i in range(1,x+1):
+    if(x%i==0):
+        print(i, end=" ")
+        
+x=int(input())
+count=0
+for i in range(1,x+1):
+    if(x%i==0):
+        count+=1
+print(count)
 
-x = input()
-print(x[::-1].lstrip('0'))
-
-x = int(input())
-for i in range(2, x + 1):
-  if x % i == 0:
-      print(i)
-      break
-
-
-x = int(input())
-for i in range(1, x + 1):
-  if x % i == 0:
-      print(i)
-
-
-x = int(input())
-cnt = 2
-for i in range(2, x // 2 + 1):
-  if x % i == 0:
-      cnt += 1
-print(cnt)
-
-
-res = 0
+sum=0
 for _ in range(100):
-  tmp = int(input())
-  res += tmp
-print(res)
+    tmp=int(input())
+    sum+=tmp
+print(sum)
+
+sum=0
+n=int(input())
+for i in range(n):
+    num=int(input())
+    sum+=num
+print(sum)
+
+binary=str(input())
+decimal=0
+for i in range(1,len(binary)+1): 
+    decimal+=int(binary[-i])*(2**(i-1))
+print(decimal)
+
+n=int(input())
+zero = 0
+for i in range(n):
+    num=int(input())
+    for j in range(len(str(num))):
+        if(str('0') in str(num)[j]):
+            zero+=1
+print(zero)
 
 
-n = int(input())
-res = 0
-for _ in range(n):
-  tmp = int(input())
-  res += tmp
-print(res)
-
-
-x = input()
-res = 0
-for i in range(len(x)):
-  res += int(x[i]) * (2 ** (len(x) - i - 1))
-print(res)
-
-
-n = int(input())
-res = 0
-for _ in range(n):
-  tmp = int(input())
-  if tmp == 0:
-      res += 1
-print(res)

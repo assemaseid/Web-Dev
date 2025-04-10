@@ -3,7 +3,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { AlbumComponent } from './components/album/album.component';
 import { AlbumDetailsComponent } from './components/album-details/album-details.component';
-import { AlbumPhotosComponent } from './album-photos/album-photos.component';
+import { AlbumPhotosComponent } from './components/album-photos/album-photos.component';
 
 export const routes: Routes = [
     {

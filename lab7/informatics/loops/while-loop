@@ -1,34 +1,40 @@
-n = int(input())
-i = 1
-while i ** 2 <= n:
-  print(i ** 2)
-  i += 1
+n=int(input())
+i=0
+sum=0
+while(i<len(str(n))):
+    sum+=int(str(n)[i])
+    i+=1
+print(sum)
+
+n=int(input())
+i=0
+count=0
+while(i<len(str(n))):
+    if(str(0) in str(n)[i]):
+        count+=1
+    i+=1
+print(count)
+
+n=int(input())
+arr=[]
+i=0
+while(i<len(str(n))):
+    arr.append(int(str(n)[i]))
+    i+=1
+print(min(arr),end=" ")
+print(max(arr))
+
+dec=int(input())
+quotient=dec
+while(quotient!=0):
+    print(quotient%2,end=" ")
+    quotient//=2
+    
+
+n=int(input())
+i = len(str(n))
+while(i>0):
+    i-=1
+    print(int(str(n)[i]),end="")
 
 
-n = int(input())
-div = 2
-while n % div != 0:
-  div += 1
-print(div)
-
-
-n = int(input())
-t = 0
-while 2**t <= n:
-  print(2**t)
-  t += 1
-
-
-n = int(input())
-while n % 2 == 0:
-  n /= 2
-print("YES" if n == 1 else "NO")
-
-
-n = int(input())
-k = 0
-cur = 1
-while cur < n:
-  cur *= 2
-  k += 1
-print(k)
