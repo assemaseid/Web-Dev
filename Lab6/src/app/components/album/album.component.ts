@@ -3,10 +3,11 @@ import { AlbumsService } from '../../services/albums.service';
 import { Album } from '../../album';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-album',
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule,FormsModule],
   templateUrl: './album.component.html',
   styleUrl: './album.component.css'
 })
@@ -14,7 +15,7 @@ import { RouterModule } from '@angular/router';
 export class AlbumComponent implements OnInit{
 
   albums:Album[]=[];
-  
+  newAlbumTitle: string = '';
   constructor(private albumService:AlbumsService){}
 
   ngOnInit():void{
@@ -37,4 +38,16 @@ export class AlbumComponent implements OnInit{
     })
   }
 
+  addAlbum() {
+    const title = this.newAlbumTitle.trim();
+    if (!title) return;
+  
+    const newAlbum: Album = { userId: 1, id: 0, title }; // id будет переопределён в сервисе
+  
+    this.albumService.createAlbum(newAlbum).subscribe((created) => {
+      this.albums.push(created); // отображаем в списке
+      this.newAlbumTitle = '';   // очищаем input
+    });
+  }
+  
 }

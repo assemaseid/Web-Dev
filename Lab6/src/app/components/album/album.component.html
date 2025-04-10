@@ -1,4 +1,6 @@
 <h1>Albums</h1>
+<button class="delete-album" (click)="addAlbum()">Add album</button>
+<input [(ngModel)]="newAlbumTitle" placeholder="Title of album" />
 <div  class="album-content">
     <div class="album" *ngFor="let album of albums">
         <p class="title"> {{album.title}}</p>
